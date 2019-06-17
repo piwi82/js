@@ -275,7 +275,7 @@ function request(method,url,callback,header = {},debug = false){
 			break;
 		}
 	};
-	/*xhr.onprogress = function(event){
+	xhr.onprogress = function(event){
 		if (event.lengthComputable){
 			let totalByteLength = event.total.toString().length;
 			console.log('{0}/{1} bytes loaded ({2}%)'.format([
@@ -288,6 +288,6 @@ function request(method,url,callback,header = {},debug = false){
 				event.loaded.toString().padStart(10,' '),
 			]));
 		}
-	};/**/
+	};
 	xhr.send();
 }
